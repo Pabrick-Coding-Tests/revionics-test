@@ -1,0 +1,20 @@
+<main class="main">
+  <h1>Aptos / Revionics UI Developer Test</h1>
+
+  <section>
+    This is the custom select:
+    <rev-select [placeholderText]="'Select and option'" [options]="optionList"
+      (onSelection)="onSelectSelection($event)" />
+  </section>
+
+  <br><br><br>
+
+  <section>
+    This is the custom select with buttons to modify the index:
+    <button (click)="increaseIndex()">+</button>
+    <button (click)="decreaseIndex()">-</button>
+    <br><br>
+    <rev-select [placeholderText]="'Select and option'" [options]="optionList" [(index)]="selectedIndex"
+      (onSelection)="onSelectSelection($event)" />
+  </section>
+</main>
